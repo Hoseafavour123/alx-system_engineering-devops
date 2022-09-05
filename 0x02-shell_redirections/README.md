@@ -6,3 +6,4 @@
 5-firstlines - A script that  displays first 10 lines of a file
 6-third_line - A script that displays  the third line of a file iacta
 7-files - A script that creates  file content follwed by a new line
+8-cwd_state - A script that prints the current working directory listings in long form and redirects ouput to the file ls_cwd_content

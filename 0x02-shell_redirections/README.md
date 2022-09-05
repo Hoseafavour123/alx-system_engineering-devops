@@ -8,3 +8,4 @@
 7-files - A script that creates  file content follwed by a new line
 8-cwd_state - A script that prints the current working directory listings in long form and redirects ouput to the file ls_cwd_content
 9-duplicate_last_line - A script that duplicates the last lune of the file iacta
+10-no_more_js - A script that searches the current directory and deletes all files endiing with .js extension

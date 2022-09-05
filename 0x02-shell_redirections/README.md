@@ -5,3 +5,4 @@
 4-lastlines - A script that  displays last 10 lines of a file
 5-firstlines - A script that  displays first 10 lines of a file
 6-third_line - A script that displays  the third line of a file iacta
+7-files - A script that creates  file content follwed by a new line

@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # show bash pid
 
 pgrep bash -l

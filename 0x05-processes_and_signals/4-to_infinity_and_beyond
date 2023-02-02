@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # displays "To infinity and beyond indefinitely"
 #+ sleep 2 after each iteration
 

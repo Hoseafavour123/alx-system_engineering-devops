@@ -3,7 +3,7 @@
 
 hr=0
 
-while [ $hr -le 20 ]
+while [ $hr -le 12 ]
 do
 	echo "Hour: $hr"
 	min=1

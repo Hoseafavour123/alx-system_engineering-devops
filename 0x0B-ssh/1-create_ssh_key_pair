@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Create ssh key pair
+ssh-keygen -b 4096

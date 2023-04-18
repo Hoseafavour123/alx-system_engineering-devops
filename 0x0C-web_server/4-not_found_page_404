@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Install nginx and configure a redirection
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'NGINX HTTP'
+sudo echo "Hello World!" > /var/www/html/index.html
+sudo echo "Ceci n'est pas une page" > /var/www/html/custom404.html
+sudo sed -i 'listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites_available/default
+sudo sed -i 'listen 80 default_server/a error_page 404 /custom404.html;' /etc/nginx/sites_available/default
+sudo service nginx start

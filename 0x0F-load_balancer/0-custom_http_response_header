@@ -4,30 +4,5 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 sudo ufw allow 'NGINX HTTP'
-echo "Hello World!" | sudo tee /var/www/html/index.html
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom404.html
-
-server_config=\
-        "server {
-            listen 80 default_server;
-            listen [::]:80 default_server;
-            root /var/www/html;
-            index index.html index.htm index.nginx-debian.html;
-            server_name _;
-            location / {
-                    #first attempt to serve content as a file, then as directory
-                    #and finallly fall to 404
-                try_files \$uri \$uri/ custom404;
-                add_header X-Served-By $hostname always;
-            }
-
-            error_page 404 /custom404.html;
-            location /custom404.html {
-                internal;
-            }
-
-            rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
-        }"
-
-echo "$server_config" > /etc/nginx/sites-enabled/default
+sudo sed -i 's/server_name _\;/server_name _\;\n\tadd_header X-Served-By $hostname\;'  /etc/nginx/sites-enabled/default
 sudo service nginx restart

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Debug server to make it deliver content on port 80
+
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart

@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+# run command as the user passed as argument
+sudo -u "$1" whoami

@@ -2,7 +2,5 @@
 # Create a backup for database in server
 
 #Generate mysqldump
-sudo mysqldump -u root -p "$1" --all-databases > "backup.sql"
-
-#Compress dump file
-sudo tar -czvf  $(date +"%d-%m-%Y").tar.gz "backup.sql"
+sudo mysqldump -u root -p "$1" --all-databases > backup.sql
+sudo tar -czvf  $(date +"%d-%m-%Y").tar.gz backup.sql

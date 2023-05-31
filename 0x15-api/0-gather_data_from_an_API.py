@@ -22,8 +22,8 @@ if __name__ == '__main__':
                     completed += 1
                 total += 1
 
-        print("Employee {} is done with tasks({}/{}):".format(usr['name'],
-                                                             completed, total))
+        print("Employee {} is done with tasks({}/{}):"
+              .format(usr['name'], completed, total))
 
         for i in range(0, len(todos)):
             if todos[i]['userId'] == eval(argv[1]) \

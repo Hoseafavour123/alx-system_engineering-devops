@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Retrieve API data for all todos of all employers"""
-import requests
 import json
+import requests
 
 
 if __name__ == '__main__':

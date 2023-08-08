@@ -8,8 +8,9 @@ import requests
 def top_ten(subreddit):
     base_url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     headers = {"User-Agent": "My-User-Agent"}
-    
-    response = requests.get(base_url, headers=headers, params={"limit": 10}, allow_redirects=False)
+
+    response = requests.get(base_url, headers=headers,
+                            params={"limit": 10}, allow_redirects=False)
 
     if response.status_code >= 300:
         print("None")
